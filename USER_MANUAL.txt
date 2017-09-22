@@ -1,0 +1,5 @@
+=============HHIS WEB CONFIGURASI==============
+- CREATE DATABASE, NAME = hhis
+- EXPORT file hhis.sql ke database yang telah dibuat
+- cara mengakses menggunakan pretty URL yii2advanced
+===============================================
