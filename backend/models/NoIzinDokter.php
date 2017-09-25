@@ -3,14 +3,16 @@
 namespace app\models;
 
 use Yii;
+use backend\models\Spesialis\Spesialis;
 
 /**
  * This is the model class for table "no_izin_dokter".
  *
  * @property string $no_izin
- * @property string $keahlian
+ * @property integer $keahlian
  *
  * @property Dokter[] $dokters
+ * @property Spesialis $keahlian0 
  */
 class NoIzinDokter extends \yii\db\ActiveRecord
 {
@@ -28,9 +30,11 @@ class NoIzinDokter extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['no_izin'], 'required'],
+             [['no_izin', 'keahlian'], 'required'],
+             [['keahlian'], 'integer'],
             [['no_izin'], 'string', 'max' => 25],
-            [['keahlian'], 'string', 'max' => 255],
+            [['no_izin'], 'unique'],
+           [['keahlian'], 'exist', 'skipOnError' => true, 'targetClass' => Spesialis::className(), 'targetAttribute' => ['keahlian' => 'id']], 
         ];
     }
 
@@ -52,4 +56,11 @@ class NoIzinDokter extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Dokter::className(), ['no_izin' => 'no_izin']);
     }
+     /** 
+    * @return \yii\db\ActiveQuery 
+    */ 
+   public function getKeahlian0() 
+   { 
+       return $this->hasOne(Spesialis::className(), ['id' => 'keahlian']); 
+   } 
 }

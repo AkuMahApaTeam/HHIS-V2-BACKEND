@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\NoIzinDokterSearch */
+        /* @var $model backend\models\NoIzinDokterSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -16,6 +16,9 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'no_izin') ?>
+    <!--   <?= $form->field($model, 'id_no_izin') ?> 
+            
+   <?= $form->field($model, 'keahlian') ?>  -->
 
 
     <div class="form-group">

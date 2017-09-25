@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
@@ -18,7 +18,8 @@ class NoIzinDokterSearch extends NoIzinDokter
     public function rules()
     {
         return [
-            [['no_izin', 'keahlian'], 'safe'],
+            [['id_no_izin', 'keahlian'], 'integer'],
+           [['no_izin'], 'safe'],
         ];
     }
 
@@ -57,8 +58,11 @@ class NoIzinDokterSearch extends NoIzinDokter
         }
 
         // grid filtering conditions
-        $query->andFilterWhere(['like', 'no_izin', $this->no_izin])
-            ->andFilterWhere(['like', 'keahlian', $this->keahlian]);
+             $query->andFilterWhere([
+           'id_no_izin' => $this->id_no_izin,
+           'keahlian' => $this->keahlian,
+       ]);
+       $query->andFilterWhere(['like', 'no_izin', $this->no_izin]);
 
         return $dataProvider;
     }
