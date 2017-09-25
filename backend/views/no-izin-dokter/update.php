@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Update No Izin Dokter: ' . $model->no_izin;
 $this->params['breadcrumbs'][] = ['label' => 'No Izin Dokters', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->no_izin, 'url' => ['view', 'id' => $model->no_izin]];
+	$this->params['breadcrumbs'][] = ['label' => $model->id_no_izin, 'url' => ['view', 'id' => $model->id_no_izin]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="no-izin-dokter-update">
