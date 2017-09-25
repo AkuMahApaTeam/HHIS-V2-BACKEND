@@ -22,7 +22,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'no_izin',
-            'keahlian',
+            [
+                            'attribute' => 'keahlian',
+                            'value' => function ($model) {
+                                return Html::a($model->keahlian0->spesialis);
+                            },
+                            'format' => 'raw',
+                            
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

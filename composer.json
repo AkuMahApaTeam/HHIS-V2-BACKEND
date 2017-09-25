@@ -21,7 +21,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "zxbodya/yii2-tinymce": "*@dev",
         "zxbodya/yii2-elfinder": "*@dev",
-        "mpdf/mpdf":"*"
+        "mpdf/mpdf":"*",
+        "kartik-v/yii2-widget-select2": "@dev"
 
     },
     "require-dev": {
