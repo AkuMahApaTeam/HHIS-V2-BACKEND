@@ -40,7 +40,7 @@ return [
         ],
         
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            // 'enablePrettyUrl' => true,
             // 'showScriptName' => false,
             'rules' => [
             ],

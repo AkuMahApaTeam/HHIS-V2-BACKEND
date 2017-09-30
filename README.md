@@ -53,3 +53,12 @@ frontend
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
+
+
+username dan password default hhis
+
+username 1 = ainun123
+password   = ainunganteng
+
+username 2 = faruq123
+password 2 = faruqganteng
